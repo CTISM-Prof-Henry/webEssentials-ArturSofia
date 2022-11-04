@@ -44,7 +44,7 @@
 </head>
 <body>
 <div class="center white-background">
-    <h1 id="t">input range</h1>
+    <h1 class="t">input range</h1>
     <h2 class="t">Para que serve o input range? 🤔</h2>
     <p class="t">Ele define um valor dentro de um intervalo que geralmente não é importante, pois é mais utilizado para fazer
         controles deslizantes.</p>
@@ -104,25 +104,40 @@
 
     function change_font_size(size){
 
-        let text = document.getElementById('t');
+        const text = Array.from(
+            document.getElementsByClassName('t')
+        );
 
         if (size == 0){
-            text.style.fontSize = 'xx-small';
+
+            text.forEach(c => {
+                c.style.fontSize = 'xx-small';
+            });
         }
         if (size == 1){
-            text.style.fontSize = 'x-small';
+            text.forEach(c => {
+                c.style.fontSize = 'x-small';
+            });
         }
         if (size == 2){
-            text.style.fontSize = 'small';
+            text.forEach(c => {
+                c.style.fontSize = 'small';
+            });
         }
         if (size == 3){
-            text.style.fontSize = 'medium';
+            text.forEach(c => {
+                c.style.fontSize = 'large';
+            });
         }
         if (size == 4){
-            text.style.fontSize = 'large';
+            text.forEach(c => {
+                c.style.fontSize = 'x-large';
+            });
         }
         if (size == 5){
-            text.style.fontSize = 'x-large';
+            text.forEach(c => {
+                c.style.fontSize = 'xx-large';
+            });
         }
         
 
